@@ -88,6 +88,16 @@ Dann `http://localhost:8000` öffnen. Hier werden die JSON-Dateien aus `data/` d
 
 Die Datei `.nojekyll` sorgt dafür, dass GitHub alle Dateien unverändert ausliefert. Alle Pfade sind relativ – es muss nichts angepasst werden.
 
+### Upload nur über die GitHub-Webseite (ohne Ordner)
+
+Beim Hochladen über „Add file → Upload files“ gehen Unterordner oft verloren. Dafür gibt es die **flache Version** im Ordner `github-upload/`: Alle Dateien liegen dort in einer Ebene, und die HTML-Seiten verweisen direkt darauf. Lade einfach **alle Dateien aus `github-upload/`** hoch (vorhandene überschreiben).
+
+Nach Änderungen an Texten oder Code die flache Version neu erzeugen:
+```bash
+python3 tools/build-data.py
+python3 tools/build-flat.py
+```
+
 ---
 
 ## 🗂️ Projektstruktur

@@ -24,6 +24,8 @@
    */
   async function loadData() {
     const bundle = window.STAT_DATA || null;
+    // Flache Upload-Version (alle Dateien in einem Ordner): Paket aus data.js nutzen.
+    if (bundle && !document.querySelector('script[src^="data/"]')) return bundle;
     if (location.protocol.startsWith('http')) {
       try {
         const loaded = await Promise.all(
