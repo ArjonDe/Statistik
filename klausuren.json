@@ -1,0 +1,63 @@
+{
+  "info": "Aufbau der drei Klausurmodi. Jede Aufgabe wird beim Start mit neuen Zahlen erzeugt. 'pool' = mögliche Vorlagen, eine davon wird zufällig gewählt.",
+  "passPercent": 50,
+  "gradeScale": [
+    { "min": 95, "grade": 1.0 },
+    { "min": 90, "grade": 1.3 },
+    { "min": 85, "grade": 1.7 },
+    { "min": 80, "grade": 2.0 },
+    { "min": 75, "grade": 2.3 },
+    { "min": 70, "grade": 2.7 },
+    { "min": 65, "grade": 3.0 },
+    { "min": 60, "grade": 3.3 },
+    { "min": 55, "grade": 3.7 },
+    { "min": 50, "grade": 4.0 },
+    { "min": 0, "grade": 5.0 }
+  ],
+  "modes": {
+    "mini": {
+      "title": "Mini-Klausur",
+      "icon": "⏱️",
+      "minutes": 15,
+      "description": "5 kurze Aufgaben quer durch den Stoff. Perfekt für zwischendurch.",
+      "items": [
+        { "chapter": 4, "pool": ["k4-mittelwert", "k4-median", "k4-haeufigkeitstabelle"], "diff": "easy" },
+        { "chapter": 5, "pool": ["k5-varianz", "k5-variationskoeffizient"], "diff": "medium" },
+        { "chapter": 10, "pool": ["k10-totale", "k10-haeufigkeiten"], "diff": "medium" },
+        { "chapter": 12, "pool": ["k12-normal-unter", "k12-binomial", "k12-poisson"], "diff": "medium" },
+        { "chapter": 13, "pool": ["k13-ki-sigma", "k13-ki-anteil"], "diff": "medium" }
+      ]
+    },
+    "probe": {
+      "title": "Probe-Klausur",
+      "icon": "📋",
+      "minutes": 30,
+      "description": "3 echte Klausuraufgaben: deskriptiv, induktiv und ein Bonus-Thema.",
+      "items": [
+        { "chapter": 5, "pool": ["k5-klassiert", "k4-klassiert"], "diff": "hard" },
+        { "chapter": 14, "pool": ["k14-ttest", "k13-ki-s", "k14-entscheidung"], "diff": "hard" },
+        { "chapter": 10, "pool": ["k10-bayes", "k16-klausur", "k12-normal-zwischen"], "diff": "hard" }
+      ]
+    },
+    "komplett": {
+      "title": "Komplette Klausur",
+      "icon": "🎓",
+      "minutes": 90,
+      "description": "Aufbau wie die echte Prüfung (WS 22/23): 6 Aufgaben, 100 Punkte.",
+      "items": [
+        { "chapter": 5, "pool": ["k5-klausur-deskriptiv"], "diff": "hard", "title": "1. Deskriptive Statistik" },
+        { "chapter": 14, "pool": ["k14-ttest"], "diff": "hard", "title": "2. Stichproben / Hypothesentest" },
+        { "chapter": 13, "pool": ["k14-ki-test"], "diff": "hard", "title": "3. Schätzen und Testen" },
+        { "chapter": 16, "pool": ["k16-klausur"], "diff": "hard", "title": "4. Indexrechnung" },
+        { "chapter": 15, "pool": ["k15-preis-absatz"], "diff": "hard", "title": "5. Regression / Preis-Absatz-Funktion" },
+        { "chapter": 10, "pool": ["k10-bayes"], "diff": "hard", "title": "6. Bedingte Wahrscheinlichkeit" }
+      ]
+    }
+  },
+  "topics": {
+    "Deskriptive Statistik": [3, 4, 5],
+    "Wahrscheinlichkeit": [9, 10, 11, 12],
+    "Induktive Statistik": [13, 14, 15],
+    "Indexrechnung": [16]
+  }
+}

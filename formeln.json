@@ -1,0 +1,97 @@
+{
+  "info": "Formelsammlung – wird im Lernbereich, in Aufgaben und im Klausurmodus angezeigt.",
+  "groups": [
+    {
+      "title": "Lagemaße",
+      "chapter": 4,
+      "items": [
+        { "name": "Arithmetisches Mittel", "formula": "x̄ = (x₁ + x₂ + … + xₙ) / n", "when": "metrische Daten" },
+        { "name": "Mittel aus Häufigkeiten", "formula": "x̄ = Σ xᵢ · hᵢ / n", "when": "Häufigkeitstabelle" },
+        { "name": "Mittel klassierter Daten", "formula": "x̄ = Σ mⱼ · nⱼ / n   (mⱼ = Klassenmitte)", "when": "Klassen statt Einzelwerte" },
+        { "name": "Median", "formula": "mittlerer Wert der sortierten Reihe; bei geradem n: Mittel der beiden mittleren", "when": "ab ordinal" },
+        { "name": "Quantil (Rohdaten)", "formula": "n·p ganzzahlig → (x₍ₙₚ₎ + x₍ₙₚ₊₁₎)/2, sonst x₍⌈ₙₚ⌉₎", "when": "Quartile: p = 0,25 / 0,75" },
+        { "name": "Quantil (klassiert)", "formula": "x = u + (p·n − F_davor) / nⱼ · Klassenbreite", "when": "„Welcher Wert wird von … % überschritten?“" },
+        { "name": "Geometrisches Mittel", "formula": "x̄_geo = ⁿ√(x₁ · x₂ · … · xₙ)", "when": "Wachstumsraten" },
+        { "name": "Harmonisches Mittel", "formula": "x̄_harm = n / Σ(1/xᵢ)", "when": "Durchschnittspreise bei gleichem Budget, Geschwindigkeiten" }
+      ]
+    },
+    {
+      "title": "Streuungsmaße",
+      "chapter": 5,
+      "items": [
+        { "name": "Spannweite", "formula": "R = x_max − x_min" },
+        { "name": "Quartilsabstand", "formula": "IQR = Q₀,₇₅ − Q₀,₂₅" },
+        { "name": "Varianz (Stichprobe)", "formula": "s² = Σ(xᵢ − x̄)² / (n − 1)", "when": "Grundgesamtheit / klassierte Verteilung: durch n" },
+        { "name": "Varianz klassiert", "formula": "s² = Σ nⱼ · (mⱼ − x̄)² / n" },
+        { "name": "Standardabweichung", "formula": "s = √s²" },
+        { "name": "Variationskoeffizient", "formula": "V = s / x̄" }
+      ]
+    },
+    {
+      "title": "Konzentration & Zusammenhang",
+      "chapter": 6,
+      "items": [
+        { "name": "Gini-Koeffizient", "formula": "G = 1 − Σ (kᵢ − kᵢ₋₁)(lᵢ + lᵢ₋₁)", "when": "kᵢ, lᵢ = kumulierte Anteile (Merkmalsträger, Merkmalssumme)" },
+        { "name": "Gini korrigiert", "formula": "G* = n / (n − 1) · G", "when": "bei n Einzelwerten" },
+        { "name": "φ-Koeffizient (4-Felder)", "formula": "φ = (n₁₁·n₂₂ − n₁₂·n₂₁) / √(n₁.·n₂.·n.₁·n.₂)", "when": "nominale Merkmale; Stärke = |φ|" },
+        { "name": "Korrelation (Bravais-Pearson)", "formula": "r = Σ(x − x̄)(y − ȳ) / √(Σ(x − x̄)² · Σ(y − ȳ)²)", "when": "beide metrisch" },
+        { "name": "Rangkorrelation (Spearman)", "formula": "ρ = 1 − 6·Σdᵢ² / (n·(n² − 1))", "when": "ordinal" },
+        { "name": "Regressionsgerade", "formula": "ŷ = a + b·x,  b = Σ(x − x̄)(y − ȳ) / Σ(x − x̄)²,  a = ȳ − b·x̄" },
+        { "name": "Bestimmtheitsmaß", "formula": "R² = r²" }
+      ]
+    },
+    {
+      "title": "Indexzahlen",
+      "chapter": 16,
+      "items": [
+        { "name": "Preisindex Laspeyres", "formula": "P_L = Σ p₁·q₀ / Σ p₀·q₀", "when": "alter Warenkorb" },
+        { "name": "Preisindex Paasche", "formula": "P_P = Σ p₁·q₁ / Σ p₀·q₁", "when": "neuer Warenkorb" },
+        { "name": "Mittlere Wachstumsrate", "formula": "r = (Endwert / Anfangswert)^(1/Anzahl Jahre) − 1" }
+      ]
+    },
+    {
+      "title": "Wahrscheinlichkeit",
+      "chapter": 9,
+      "items": [
+        { "name": "Laplace", "formula": "P(A) = günstige / mögliche Ergebnisse" },
+        { "name": "Gegenereignis", "formula": "P(nicht A) = 1 − P(A)" },
+        { "name": "Additionssatz", "formula": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)" },
+        { "name": "Unabhängigkeit", "formula": "P(A ∩ B) = P(A) · P(B)" },
+        { "name": "Bedingte Wahrscheinlichkeit", "formula": "P(B | A) = P(A ∩ B) / P(A)" },
+        { "name": "Totale Wahrscheinlichkeit", "formula": "P(B) = Σ P(B | Aᵢ) · P(Aᵢ)" },
+        { "name": "Satz von Bayes", "formula": "P(A | B) = P(B | A) · P(A) / P(B)" },
+        { "name": "Fakultät / Permutation", "formula": "n! = n · (n − 1) · … · 1" },
+        { "name": "Kombination", "formula": "(n über k) = n! / (k! · (n − k)!)", "when": "ohne Reihenfolge, ohne Wiederholung" },
+        { "name": "Variation", "formula": "n! / (n − k)!", "when": "mit Reihenfolge, ohne Wiederholung" }
+      ]
+    },
+    {
+      "title": "Zufallsvariablen & Verteilungen",
+      "chapter": 12,
+      "items": [
+        { "name": "Erwartungswert", "formula": "E(X) = Σ xᵢ · p(xᵢ)" },
+        { "name": "Varianz", "formula": "Var(X) = Σ (xᵢ − E(X))² · p(xᵢ)" },
+        { "name": "Binomialverteilung", "formula": "P(X = k) = (n über k) · pᵏ · (1 − p)ⁿ⁻ᵏ,  E = n·p,  Var = n·p·(1 − p)" },
+        { "name": "Poissonverteilung", "formula": "P(X = k) = λᵏ / k! · e^(−λ),  E = Var = λ" },
+        { "name": "Hypergeometrisch", "formula": "P(X = k) = (M über k)(N − M über n − k) / (N über n)" },
+        { "name": "Standardisierung", "formula": "z = (x − μ) / σ,  P(X ≤ x) = Φ(z),  Φ(−z) = 1 − Φ(z)" },
+        { "name": "68-95-99,7-Regel", "formula": "μ ± 1σ: 68,3 %   μ ± 2σ: 95,4 %   μ ± 3σ: 99,7 %" }
+      ]
+    },
+    {
+      "title": "Konfidenzintervalle & Tests",
+      "chapter": 13,
+      "items": [
+        { "name": "KI Mittelwert, σ bekannt", "formula": "x̄ ± z(1 − α/2) · σ / √n" },
+        { "name": "KI Mittelwert, σ unbekannt", "formula": "x̄ ± t(n − 1; 1 − α/2) · s / √n" },
+        { "name": "KI Anteil", "formula": "p ± z(1 − α/2) · √(p(1 − p) / n)", "when": "n·p ≥ 5 und n·(1 − p) ≥ 5" },
+        { "name": "Stichprobenumfang", "formula": "n ≥ (z · σ / e)²   bzw.   n ≥ z² · p(1 − p) / e²", "when": "e = halbe Intervallbreite, immer aufrunden" },
+        { "name": "z-Test", "formula": "z = (x̄ − μ₀) / (σ / √n)" },
+        { "name": "t-Test", "formula": "t = (x̄ − μ₀) / (s / √n),  df = n − 1" },
+        { "name": "Anteilstest", "formula": "z = (p − π₀) / √(π₀(1 − π₀) / n)" },
+        { "name": "Ablehnung von H₀", "formula": "beidseitig: |z| > z(1 − α/2)  ·  rechts: z > z(1 − α)  ·  links: z < −z(1 − α)" },
+        { "name": "Wichtige z-Werte", "formula": "90 %: 1,645 (zweiseitig) · 95 %: 1,96 · 99 %: 2,576 · einseitig 5 %: 1,645 · einseitig 1 %: 2,326" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "info": "Welche Aufgabenvorlagen (scripts/generator.js) zu welchem Kapitel und Schwierigkeitsgrad gehören. Die Vorlagen werden der Reihe nach abwechselnd verwendet; jede Aufgabe bekommt eigene Zahlen.",
+  "counts": { "easy": 30, "medium": 20, "hard": 10 },
+  "labels": { "easy": "Leicht", "medium": "Mittel", "hard": "Schwer" },
+  "xp": { "easy": 10, "medium": 20, "hard": 40 },
+  "chapters": {
+    "1": { "templates": { "easy": ["k1-rollen", "k1-vollerhebung"], "medium": ["k1-diskret", "k1-aussage", "k1-rollen"], "hard": ["k1-komplett"] } },
+    "2": { "templates": { "easy": ["k2-skala"], "medium": ["k2-lagemass", "k2-skala"], "hard": ["k2-zusammenhang"] } },
+    "3": { "templates": { "easy": ["k3-absolut", "k3-tabelle"], "medium": ["k3-kumuliert", "k3-tabelle"], "hard": ["k3-klassiert"] } },
+    "4": { "templates": { "easy": ["k4-mittelwert", "k4-median", "k4-modus"], "medium": ["k4-haeufigkeitstabelle", "k4-quartile", "k4-harmonisch"], "hard": ["k4-klassiert", "k4-ueberschritten"] } },
+    "5": { "templates": { "easy": ["k5-spannweite", "k5-varianz"], "medium": ["k5-variationskoeffizient", "k5-varianz"], "hard": ["k5-klassiert", "k5-klausur-deskriptiv"] } },
+    "6": { "templates": { "easy": ["k6-anteil"], "medium": ["k6-gini", "k6-anteil"], "hard": ["k6-gini-klassiert", "k6-gini"] } },
+    "7": { "templates": { "easy": ["k7-ergaenzen", "k7-prozent"], "medium": ["k7-phi", "k7-prozent"], "hard": ["k7-zusammenfassen"] } },
+    "8": { "templates": { "easy": ["k8-fakultaet", "k8-haendedruck"], "medium": ["k8-kombination", "k8-variation"], "hard": ["k8-hypergeometrisch", "k8-liga"] } },
+    "9": { "templates": { "easy": ["k9-laplace", "k9-muenze"], "medium": ["k9-baum", "k9-mindestens"], "hard": ["k9-additionssatz", "k9-wartezeit"] } },
+    "10": { "templates": { "easy": ["k10-haeufigkeiten", "k10-falschpositiv"], "medium": ["k10-totale", "k10-bedingt-tabelle", "k10-falschpositiv"], "hard": ["k10-bayes", "k10-maschinen"] } },
+    "11": { "templates": { "easy": ["k11-erwartungswert"], "medium": ["k11-varianz", "k11-versicherung"], "hard": ["k11-spiel", "k11-varianz"] } },
+    "12": { "templates": { "easy": ["k12-binomial", "k12-poisson"], "medium": ["k12-normal-unter", "k12-normal-zwischen", "k12-binomial-mind"], "hard": ["k12-normal-intervall", "k12-poisson-skaliert", "k12-seltene"] } },
+    "13": { "templates": { "easy": ["k13-ki-sigma"], "medium": ["k13-ki-s", "k13-ki-anteil"], "hard": ["k13-stichprobenumfang", "k13-ki-s"] } },
+    "14": { "templates": { "easy": ["k14-hypothesen"], "medium": ["k14-entscheidung", "k14-anteil"], "hard": ["k14-ttest", "k14-ki-test"] } },
+    "15": { "templates": { "easy": ["k15-r-deuten", "k15-prognose"], "medium": ["k15-korrelation", "k15-spearman"], "hard": ["k15-preis-absatz"] } },
+    "16": { "templates": { "easy": ["k16-preisaenderung", "k16-wachstum"], "medium": ["k16-laspeyres", "k16-paasche"], "hard": ["k16-klausur"] } }
+  }
+}

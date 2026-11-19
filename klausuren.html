@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Klausurmodus – Statistik leicht</title>
+  <meta name="description" content="Mini-, Probe- und komplette Klausur mit Timer, Note und Fehleranalyse.">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/darkmode.css">
+  <script>
+    /* Theme sofort setzen, damit nichts aufblitzt */
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem('statistik-lernplattform-v1') || '{}');
+        var t = (s.settings && s.settings.theme) || 'auto';
+        var dark = t === 'dark' || (t === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+</head>
+<body data-page="klausuren">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header id="app-header"></header>
+  <main id="main" class="container" tabindex="-1">
+    <div class="loading" aria-live="polite"><span class="spinner"></span> Lade Inhalte …</div>
+  </main>
+  <nav id="tabbar"></nav>
+  <noscript><p class="container">Bitte aktiviere JavaScript, um die Lernplattform zu nutzen.</p></noscript>
+  <script src="data/data.js"></script>
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/statistik.js"></script>
+  <script src="scripts/charts.js"></script>
+  <script src="scripts/router.js"></script>
+  <script src="scripts/generator.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/quiz.js"></script>
+  <script src="scripts/klausuren.js"></script>
+  
+</body>
+</html>
